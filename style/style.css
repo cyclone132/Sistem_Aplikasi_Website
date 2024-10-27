@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur gaya umum untuk seluruh halaman */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0 auto;
+    max-width: 1200px;
+    font-size: 1rem;
+}
+
+h1, h2 {
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+h2 {
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 20px; /* Jarak di atas tabel */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Gaya untuk header tabel */
+th {
+    background-color: rgb(0, 3, 197);
+    border: 1px solid black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+th:hover {
+    background-color: rgb(0, 2, 138);
+}
+
+/* Gaya untuk baris data tabel */
+td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Hover pada tabel */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tombol aksi untuk Edit dan Hapus */
+td a {
+    margin: 0 5px;
+    padding: 6px 12px;
+    background-color: rgb(177, 0, 0);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+td a:hover {
+    background-color: rgb(124, 0, 0);
+}
+
+td a.edit {
+    background-color: rgb(0, 3, 197);
+}
+
+td a.edit:hover {
+    background-color: rgb(0, 2, 138);
+}
+
+/* Form pencarian, Pengisian Pengunjuan, dan Update Pengunjung */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="number"], input[type="date"], input[type="search"] {
+    width: 250px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box; /* Menghindari elemen melebihi lebar kontainer */
+}
+
+/* Gaya untuk tombol di form */
+button[type="submit"], [type="button"]  {
+    background-color: rgb(0, 3, 197);
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(0, 2, 138);
+    font-weight: 700;
+}
+
+button[type="button"]  {
+    background-color: rgb(0, 153, 59);
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%;
+}
+
+button[type="button"]:hover {
+    background-color: rgb(0, 107, 41);
+    font-weight: 700;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: rgb(0, 153, 59);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 30%;
+    text-align: center;
+}
+
+.back-button:hover {
+    font-weight: 700;
+    background-color: rgb(0, 107, 41);
+}
+
+/* Gaya untuk modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content button#confirmDeleteButton {
+    background-color: #f44336;
+    color: white;
+}
+
+.modal-content button#cancelButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+/* Animasi fade-in dan fade-out */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Atur modal dengan animasi */
+.modal.fade-in {
+    animation: fadeIn 0.3s forwards; /* Animasi fade-in selama 0.3 detik */
+}
+
+.modal.fade-out {
+    animation: fadeOut 0.3s forwards; /* Animasi fade-out selama 0.3 detik */
+}
+
+/* Tetapkan gaya modal agar berada di tengah layar */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Mulai dengan opacity 0 untuk animasi */
+    pointer-events: none; /* Nonaktifkan klik ketika modal tidak muncul */
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Aktifkan pointer events saat modal muncul */
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    table, form {
+        width: 100%;
+    }
+
+    input[type="text"], input[type="number"], input[type="date"], button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    td, th {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
